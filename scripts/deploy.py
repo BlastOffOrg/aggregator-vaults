@@ -19,7 +19,7 @@ def deploy_original_and_factory():
         "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed"
     )
 
-    salt_string = "v3.0.2"
+    salt_string = "v1.0.0"
 
     # Create a SHA-256 hash object
     hash_object = hashlib.sha256()
@@ -52,9 +52,9 @@ def deploy_original_and_factory():
     print(f"Deploying factory...")
 
     factory_constructor = vault_factory.constructor.encode_input(
-        "Yearn v3.0.2 Vault Factory",
+        "Blastoff v1.0.0 Vault Factory",
         original_address,
-        "0x33333333D5eFb92f19a5F94a43456b3cec2797AE",
+        deployer,
     )
 
     factory_deploy_bytecode = HexBytes(
